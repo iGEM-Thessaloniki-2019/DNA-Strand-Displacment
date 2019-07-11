@@ -10,4 +10,6 @@ This file takes multiple hours or even days to complete, depending on the number
 
 export_csv.py converts .kinda file into a .csv file.
 
+system-script.sh is a bash file doing the sytem analaysis and the simulation of the system. At the enn it exports a concentration - time diagram for the specified conponents 
+
 export_box_figure.py creates a diagram of the temporary depletion between the specified complexes.
