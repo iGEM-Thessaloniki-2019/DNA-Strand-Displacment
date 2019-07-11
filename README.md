@@ -1,5 +1,8 @@
 # DNA-Strand-Displacment
 
+--Prestiquences
+KinDA https://github.com/DNA-and-Natural-Algorithms-Group/KinDA
+
 The .pil file contains sequences, strands and complexes for the system.
 
 export_kinda.py collects data stats and exports them in a .kinda file.
