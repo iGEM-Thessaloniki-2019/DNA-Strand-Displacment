@@ -10,7 +10,7 @@ cat first_reaction.pil | KinDA --verbose --unproductive-reactions --spurious-rea
 KinDA --spurious-reactions --unproductive-reactions -s 0 --restore-json first_reaction.json > first_reaction_data.pil
 
 ##Simulation and Figure 
-cat first_reaction_data.pil | pilsimulator --atol 1e-13 --rtol 1e-13 --mxstep 100000 --t0 0 --t-log 10000 --t8 360000 --pyplot-labels I1 BA IA B1 --p0 I1=10e-9 BA=0.05e-9 IA=0 B1=0 --pyplot fisrt_reaction_simulation.pdf
+cat first_reaction_data.pil | pilsimulator --atol 1e-13 --rtol 1e-13 --mxstep 100000 --t0 0 --t-log 10000 --t8 360000 --pyplot-labels I1 BA IA B1 --p0 I1=10e-9 BA=0.05e-9 IA=0 B1=0 --pyplot fisrt_reaction_simulation.pdf | sss.txt
 
 ##Export a csv containing sytem data
 python json_to_csv.py
