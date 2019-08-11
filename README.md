@@ -1,4 +1,4 @@
-# DNA-Strand-Displacment
+# DNA-Strand-Displacement
 
 --Prestiquences
 
@@ -10,7 +10,7 @@ The one containing the sequences of the first reaction in the system is first-re
 
 This file takes multiple hours or even days to complete, depending on the number of system objects
 
-pil_to_all.sh is a bash file doing the sytem analaysis and the simulation of the system. At the end it exports a concentration - time diagram for the specified conponents a .txt cointing the table of the figure, a .pil containing all the sytem data and a .json file used in the following pil_to_box_figure.py and json_to_csv.py 
+pil_to_all.sh is a bash file doing the sytem analysis and the simulation of the system. At the end it exports a concentration - time diagram for the specified conponents a .txt containing the table of the figure, a .pil containing all the system data and a .json file used in the following pil_to_box_figure.py and json_to_csv.py 
 This file takes multiple hours or even days to complete, depending on the number of system objects.
 
 json_to_box_figure.py creates a diagram of the temporary depletion between the specified complexes.
