@@ -1,0 +1,56 @@
+directive simulation {
+  final=100000; 
+}
+directive stochastic {
+  trajectories = 10;
+}
+directive simulator stochastic
+directive parameters [u=0.001;k=0.003]
+directive compilation infinite
+directive unproductive
+directive leaks
+directive polymers
+
+dom ta = {bind=k;unbind=u;colour="red"}
+dom tb = {bind=k;unbind=u;colour="green"}
+dom tc = {bind=k;unbind=u;colour="blue"}
+dom tr = {bind=k;unbind=u;colour="red"}
+dom tq = {bind=k;unbind=u;colour="black"}
+dom tg = {bind=k;unbind=u}
+dom td = {bind=k;unbind=u}
+
+
+def BTD() = <b td^>
+def TRR() = <tr^ r>
+def NTB() = <n tb^>
+def ITC() = <i tc^>
+def DTG() = <d tg^>
+def CTB() = <c tb^>
+def TAA() = <ta^ a>
+def N() = <n>
+def TBB() = <tb^ b>
+def TDD() = <td^ d>
+def ATB() = <a tb^>
+def BTR() = <b tr^>
+def RTQ() = <r tq^>
+def TCC() = <tc^ c>
+def C() = <c>
+def I() = <i>
+
+def GATE_1(tg,d,td,b,tb,n)= [n]:[tb^ b]:[td^ d]{tg^*}
+def GATE_2() = {ta^*}[a tb^]:[b tr^]:[r tq^]
+def GATE_3(i,tc,c,tb,b,tr,r,tq) = [i]:[tc^ c]:[tb^ b]:[tr^ r]{tq^*}
+def GATE_4(tc,c) = {tc^*}[c]
+
+( 50 DTG()
+| 50 BTD()
+| 50 NTB()
+| 25 GATE_1(tg,d,td,b,tb,n)
+| 35 GATE_2()
+| 35 GATE_3(i,tc,c,tb,b,tr,r,tq)
+| 100 GATE_4(tc,c)
+| 50 TAA()
+| 50 TRR()
+| 50 CTB()
+| 50 ITC()
+)

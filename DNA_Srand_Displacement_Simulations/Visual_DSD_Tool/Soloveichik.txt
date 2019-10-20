@@ -1,0 +1,51 @@
+directive simulation {
+  final=100000; 
+  plots=[C()];
+}
+directive simulator stochastic
+directive parameters [k=0.003;u=0.1]
+directive compilation infinite
+directive unproductive
+directive leaks
+directive polymers
+
+dom ta = {bind=k;unbind=u;colour="red"}
+dom tb = {bind=k;unbind=u;colour="green"}
+dom tr = {bind=k;unbind=u;colour="red"}
+dom tc = {bind=k;unbind=u;colour="blue"}
+dom tq = {bind=k;unbind=u;colour="black"}
+
+def TAA() = <ta^ a>
+def TBB() = <tb^ b>
+def TCC() = <tc^ c>
+def ATB() = <a tb^>
+def BTR() = <b tr^>
+def RTQ() = <r tq^>
+def I() = <i>
+def TRR() = <tr^ r>
+def ITC() = <i tc^>
+def CTR() = <c tr^>
+def CTB() = <c tb^>
+def BTR() = <b tr^>
+def ITB() = <i tb^>
+def BTB() = <b tb^>
+def BTC() = <b tc^>
+def C() = <c>
+
+
+def JOIN() = {ta^*}[a tb^]:[b tr^]:[r tq^]
+def FORK(i,tc,c,tb,b,tr,r,tq) = [i]:[tc^ c]:[tb^ b]:[tr^ r]{tq^*}
+def REP(tc,c) = {tc^*}[c]
+
+( 50 TAA()
+| 50 TBB()
+| 50 TRR()
+| 50 CTB()
+| 50 ITC()
+| 35 FORK(i,tc,c,tb,b,tr,r,tq)
+| 35 JOIN()
+| 35 REP(tc,c)
+)
+
+
+

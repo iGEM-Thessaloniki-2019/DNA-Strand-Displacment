@@ -1,0 +1,29 @@
+directive simulation {
+  final=100000; 
+  plots=[REP()];
+}
+directive simulator stochastic
+directive parameters [k=0.003;u=0.1]
+directive compilation infinite
+directive unproductive
+directive leaks
+directive polymers
+
+def INP() = <ca^ a b^ c t^>
+def F1() = <d^ e^ ttc^>[ca^ a b^ c]{t^*}
+
+def F2() = <f^>[ca^ d^ e^ ttc^ ca^ a]{b^*}
+
+def SS() = <f^ ca^>[d^ e^ ttc^ ca^ a]:<big>[ccct g^ ca^ d^ e^]{ttc^ ca^}
+
+def FUEL() = < d^ e^ ttc^ ca^ a>
+
+def REP() = [big ccct]{g^*}
+
+( 50 INP()
+| 100 F1()
+| 100 F2()
+| 100 SS()
+| 100 FUEL()
+| 100 REP()
+)

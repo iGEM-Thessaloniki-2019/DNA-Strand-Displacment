@@ -1,0 +1,65 @@
+directive simulation {
+  final=99960;
+  points = 1666;
+  plots=[C()]
+}
+directive stochastic {
+  trajectories = 20;
+}
+directive simulator stochastic
+directive parameters [u=0.001]
+directive compilation infinite
+directive unproductive
+directive leaks
+directive polymers
+
+dom ta = {bind=0.0001;unbind=u;colour="red";seq=CTGTTT}
+dom tb = {bind=0.0006;unbind=u;colour="green";seq=TCATTC}
+dom tc = {bind=0.005;unbind=u;colour="blue";seq=TACCCA}
+dom tr = {bind=0.005;unbind=u;colour="red";seq=AACACC}
+dom tq = {bind=0.0005;unbind=u;colour="black";seq=TTACAG}
+dom tg = {bind=0.0004;unbind=u;seq=TATCAG}
+dom td = {bind=0.0003;unbind=u;seq=TTATCC}
+dom a = {seq=CATTGCTCCTCTTTCTACCTC}
+dom b = {seq=CATTGCTTTCTTGAGTCCCTT}
+dom c = {seq=CATTGCCACATCGAGTCACTT}
+dom r = {seq=CATTGCCTATCCGAGTCTACC}
+dom i = {seq=CTGTCCTACTTAGAGTCCTTA}
+dom n = {seq=CTGTCAAATCCTGAGTCTTCT}
+dom d = {seq= ACCGGAAGTGCTCCAACCAAACGAGTCCTCC}
+
+def BTD() = <b td^>
+def TRR() = <tr^ r>
+def NTB() = <n tb^>
+def ITC() = <i tc^>
+def DTG() = <d tg^>
+def CTB() = <c tb^>
+def TAA() = <ta^ a>
+def N() = <n>
+def TBB() = <tb^ b>
+def TDD() = <td^ d>
+def ATB() = <a tb^>
+def BTR() = <b tr^>
+def RTQ() = <r tq^>
+def TCC() = <tc^ c>
+def C() = <c>
+def I() = <i>
+
+def INPUT(tg,d,td,b,tb,n)= [n]:[tb^ b]:[td^ d]{tg^*}
+def JOIN() = {ta^*}[a tb^]:[b tr^]:[r tq^]
+def FORK(i,tc,c,tb,b,tr,r,tq) = [i]:[tc^ c]:[tb^ b]:[tr^ r]{tq^*}
+def REPORTER(tc,c) = {tc^*}[c]
+
+( 50 DTG()
+| 50 BTD()
+| 50 NTB()
+| 25 INPUT(tg,d,td,b,tb,n)
+| 30 JOIN()
+| 30 FORK(i,tc,c,tb,b,tr,r,tq)
+| 100 REPORTER(tc,c)
+| 50 TAA()
+| 50 TRR()
+| 50 CTB()
+| 50 ITC()
+| 0 C()
+)
