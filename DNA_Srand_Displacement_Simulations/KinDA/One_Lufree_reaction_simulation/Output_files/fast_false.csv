@@ -1,0 +1,39 @@
+# Data analyzed from first_reaction.json on 07/27/19 at 22:33:45
+,
+# REACTION RATE DATA
+reaction,k_1,k_1 err,k_2,k_2 err
+[Complex(B1)] + [Complex(IA)] -> [Complex(cpx_A:B)] + [Complex(cpx_I)],26683.4765362,inf,nan,inf
+[Complex(BA)] + [Complex(IA)] -> [Complex(cpx_A:A:B)] + [Complex(cpx_I)],6407.23531889,inf,nan,inf
+[Complex(IA)] + [Complex(IA)] -> [Complex(cpx_A:A)] + [Complex(cpx_I:I)],2224.24037479,inf,nan,inf
+[Complex(BA)] + [Complex(IA)] -> [Complex(BA)] + [Complex(IA)],2143754.15045,71240.4996029,1797321.54022,201588.785802
+[Complex(BA)] + [Complex(IA)] -> [Complex(cpx_A)] + [Complex(cpx_A:I:B)],6407.23531889,inf,nan,inf
+[Complex(B1)] + [Complex(IA)] -> [Complex(B1)] + [Complex(IA)],3686322.28348,190374.983521,1818738.68989,268316.647309
+[Complex(B1)] + [Complex(IA)] -> [Complex(cpx_A)] + [Complex(cpx_B:I)],26683.4765362,inf,nan,inf
+[Complex(BA)] + [Complex(IA)] -> [Complex(cpx_A:A:I)] + [Complex(cpx_B)],6407.23531889,inf,nan,inf
+[Complex(BA)] + [Complex(BA)] -> [Complex(cpx_A)] + [Complex(cpx_A:B:B)],34253.3017718,inf,nan,inf
+[Complex(B1)] + [Complex(BA)] -> [Complex(cpx_A)] + [Complex(cpx_B:B)],158757.462991,inf,nan,inf
+[Complex(BA)] + [Complex(IA)] -> [Complex(cpx_A:A)] + [Complex(cpx_B:I)],6407.23531889,inf,nan,inf
+[Complex(IA)] + [Complex(IA)] -> [Complex(cpx_A:A:I)] + [Complex(cpx_I)],2224.24037479,inf,nan,inf
+[Complex(IA)] + [Complex(IA)] -> [Complex(cpx_A)] + [Complex(cpx_A:I:I)],2224.24037479,inf,nan,inf
+[Complex(IA)] + [Complex(IA)] -> [Complex(IA)] + [Complex(IA)],147689.560886,12867.6565101,22369748.9923,5263269.55548
+[Complex(BA)] + [Complex(BA)] -> [Complex(cpx_A:A:B)] + [Complex(cpx_B)],34253.3017718,inf,nan,inf
+[Complex(BA)] + [Complex(BA)] -> [Complex(BA)] + [Complex(BA)],58884539.6822,981136.570273,165220.06696,12471.3542781
+[Complex(BA)] + [Complex(BA)] -> [Complex(cpx_A:A)] + [Complex(cpx_B:B)],34253.3017718,inf,nan,inf
+[Complex(BA)] + [Complex(I1)] -> [Complex(B1)] + [Complex(IA)],1667772.92239,342087.758703,281.329425978,24.6014973938
+[Complex(B1)] + [Complex(BA)] -> [Complex(B1)] + [Complex(BA)],103039746.871,2855614.29536,164524.191104,27075.5562918
+[Complex(B1)] + [Complex(B1)] -> [Complex(B1)] + [Complex(B1)],150808730.918,14933739.1042,2293046.24151,873260.990005
+[Complex(BA)] + [Complex(I1)] -> [Complex(cpx_A)] + [Complex(cpx_B:I)],71694.7458288,inf,nan,inf
+[Complex(I1)] + [Complex(IA)] -> [Complex(I1)] + [Complex(IA)],3570196.90028,244021.736323,1263749.72208,230918.545859
+[Complex(I1)] + [Complex(I1)] -> [Complex(I1)] + [Complex(I1)],101151814.414,10016494.3846,3002670.1193,837132.661575
+[Complex(I1)] + [Complex(IA)] -> [Complex(cpx_A)] + [Complex(cpx_I:I)],39381.6962458,inf,nan,inf
+[Complex(BA)] + [Complex(IA)] -> [Complex(cpx_A)] + [Complex(cpx_A:B:I)],6407.23531889,inf,nan,inf
+[Complex(BA)] + [Complex(I1)] -> [Complex(BA)] + [Complex(I1)],91584121.2397,1948236.4487,36444.1825811,12217.8932895
+[Complex(B1)] + [Complex(I1)] -> [Complex(B1)] + [Complex(I1)],116758947.14,11561980.8221,4413394.60562,1203899.23673
+,
+# RESTING SET DATA
+resting set,p(nonspurious),p(nonspurious) err,temporary depletion
+[Complex(BA)],0.5,0.288675134595,0.000349565734449
+[Complex(IA)],0.5,0.288675134595,6.051286634e-07
+[Complex(I1)],0.5,0.288675134595,0.000257530156256
+[Complex(B1)],0.5,0.288675134595,7.2048772303e-05
+,
