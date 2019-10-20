@@ -13,24 +13,11 @@ NUPACK 3.2.2+ (http://www.nupack.org)
 
 ### Usage and our code
 
-The scripts that we used for the different systems are present in  the directory "DNA_Srand_Displacement_Simulations/KinDA/Soloveichik_Simulation/Input_files" and "DNA_Srand_Displacement_Simulations/KinDA/One_Lufree_reaction_simulation/Input_files". The first directory has the input files for the system described by Dr. Soloveichik while the second  
+The scripts that we used for the different systems are present in  the directory "DNA_Srand_Displacement_Simulations/KinDA/Soloveichik_Simulation/Input_files" and "DNA_Srand_Displacement_Simulations/KinDA/One_Lufree_reaction_simulation/Input_files". The first directory has the input files for the system described by Dr. Soloveichik while the second defines one reaction of the Lufree system. The .pil files define the sequences, the toeholds, the domains and the components of the circuit and the .sh files contain the process pipeline. Concering the json_to_box_figure.py and the json_to_csv.py, they first calculates the tempory deplation of each component and creates a figure and the second, prints the inetic data in a csv file.
 
-"DNA_Srand_Displacement_Simulations/KinDA/One_Lufree_reaction_simulation/Output_files/" and in "DNA_Srand_Displacement_Simulations/KinDA/Soloveichik_Simulation/Output_files".
+The output of each process are files that contain the kinetic data of each reaction and figures for simulations of predifined initial concetrations. These results are present in the directory "DNA_Srand_Displacement_Simulations/KinDA/One_Lufree_reaction_simulation/Output_files/" and in "DNA_Srand_Displacement_Simulations/KinDA/Soloveichik_Simulation/Output_files". 
 
-
-The .pil file contains sequences, strands and complexes for the system. 
-The one containing the sequences of our first experiment is system.pil
-The one containing the sequences of the first reaction in the system is first-reaction.pil
-
-This file takes multiple hours or even days to complete, depending on the number of system objects
-
-pil_to_all.sh is a bash file doing the sytem analysis and the simulation of the system. At the end it exports a concentration - time diagram for the specified conponents a .txt containing the table of the figure, a .pil containing all the system data and a .json file used in the following pil_to_box_figure.py and json_to_csv.py 
-This file takes multiple hours or even days to complete, depending on the number of system objects.
-
-json_to_box_figure.py creates a diagram of the temporary depletion between the specified complexes.
-
-json_to_csv.py converts .pil file into a .csv file.
-
+We have to note that the soloveichik system took multiple days days to complet on an 8 core processor.
 
 # Visual DSD Tool 
 
