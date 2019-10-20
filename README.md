@@ -40,5 +40,5 @@ Python 2.7+ or Python 3
 
 ## Usage and code
 
-The script CorrectionCompareEvaluate.py was used for the correction of the experimental data over photobleaching.   
+The script CorrectionCompareEvaluate.py was used for the correction of the experimental data over photobleaching. The script uses reference data defined in line 13, 14 and 15 (file name name of wells and number of well in the array). The input files for the simulation and experimental data are defined in the same manner, in the lines 10,11 and 16-19.  
 
