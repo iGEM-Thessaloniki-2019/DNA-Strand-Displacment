@@ -40,4 +40,5 @@ Python 2.7+ or Python 3
 
 ## Usage and code
 
+The script CorrectionCompareEvaluate.py was used for the correction of the experimental data over photobleaching.   
 
