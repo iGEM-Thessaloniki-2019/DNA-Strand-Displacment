@@ -36,3 +36,8 @@ In order to reproduce our simulations, one can copy the desired script and paste
 # Correction for Bleaching
 
 ## Dependencies
+Python 2.7+ or Python 3
+
+## Usage and code
+
+
