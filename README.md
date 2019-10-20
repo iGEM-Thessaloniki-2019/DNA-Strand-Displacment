@@ -1,7 +1,30 @@
-# DNA-Strand-Displacement
+# DNA Strand Displacement Simulations 
 
---Prestiquences
 
+# KinDA
+
+## Dependencies
+
+# Visual DSD Tool 
+
+Visual DSD Tool is a software developed by Microsoft, able to perform stochastic and deterministic simulations for a network of DNA Strand Displacement reactions at the domain level. It can provide very quickly (~5 min or less) representative simulations for very big systems. The software is freely available at https://www.microsoft.com/en-us/research/project/programming-dna-circuits/#!download.
+
+## Dependencies
+
+Silverlight 5.0 (https://www.microsoft.com/silverlight/)
+
+## Usage and our code
+
+The scripts that we used for the different systems are present in  the directory "DNA_Srand_Displacement_Simulations/Visual_DSD_Tool". The ELK1.txt and P65.txt contain the code for the γ-TLA system with specified sequences and custom binding and unbinding rates for the ELK1 and P65 systems respectivlly. We have to note that P65 rates are slected based on the experimental data, while the rates of ELK1 selected completlly based on the model. The files Soloveichik.txt, Lufree.txt and Soloveichik.txt, contain the script for the coresponding circuits without specfing the sequences. Also, in these scripts we use the default binding and unbinding rates.
+
+In order to reproduce our simulations, one can copy the desired script and paste it in the Visual DSD Tool in the DSD Code tab and press the Simualte button. After some minutes (~5) the simulation should be completed. From these simulations, we used the figures for presentation of the model in the wiki page (https://2019.igem.org/Team:Thessaloniki/Dsd) and the tables for the data analysis.
+
+# Correction for Bleaching
+
+## Dependencies
+
+--
+Linux
 KinDA https://github.com/DNA-and-Natural-Algorithms-Group/KinDA
 
 The .pil file contains sequences, strands and complexes for the system. 
