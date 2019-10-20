@@ -33,6 +33,16 @@ The scripts that we used for the different systems are present in  the directory
 
 In order to reproduce our simulations, one can copy the desired script and paste it in the Visual DSD Tool in the DSD Code tab and press the Simualte button. After some minutes (~5) the simulation should be completed. From these simulations, we used the figures for presentation of the model in the wiki page (https://2019.igem.org/Team:Thessaloniki/Dsd) and the tables for the data analysis.Exept the team wiki, the results are present in the directory "DNA_Srand_Displacement_Simulations/Visual_DSD_Tool/VisualDSDTool_Results".
 
+# Calculation of binding equilibrium constants
+
+## Dependencies
+NUPACK 3.0.6 (http://www.nupack.org)
+stickydesign (https://github.com/DNA-and-Natural-Algorithms-Group/stickydesign)
+
+## Usage and code
+
+The script Kseq.py was used to initially calculate the binding free energy of each domain and toehold and after that, the binding equilibrium. The sequences for each domain and toehold is defined in the array seqs in line 3. The output constants are printed in the python shell.
+
 # Correction for Bleaching
 
 ## Dependencies
